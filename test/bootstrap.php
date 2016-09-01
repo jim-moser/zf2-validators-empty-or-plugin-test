@@ -1,5 +1,5 @@
 <?php
-namespace JimMoser\ValidatorTest;
+namespace JimMoser\ValidatorPluginTest;
 
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;
@@ -10,9 +10,18 @@ error_reporting(E_ALL | E_STRICT);
 chdir(__DIR__);
 
 /**
- * Test bootstrap.
+ * Bootstrap for unit testing.
  * 
- * Auto loading and module loading for unit testing.
+ * Module loading and autoloading for unit testing. The autoloading is provided 
+ * in case Composer autoloading is not being used.
+ * 
+ * @author    Jim Moser <jmoser@epicride.info>
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-plugin-test 
+ *            for source repository
+ * @copyright Copyright (c) July 14, 2016 Jim Moser
+ * @license   LICENSE.txt at http://github.com/jim-moser/
+ *            zf2-validators-empty-or-plugin-test  
+ *            New BSD License
  */
 class Bootstrap
 {
@@ -32,20 +41,26 @@ class Bootstrap
 
         static::initAutoloader();
 
-        // Add Test\.. directories to autoloader search path since some tests
+        // Add test directories to autoloader search path since some tests
         // call classes in these directories.
-        // Uncomment this if not using composer autoloading.
-        /*
+        // Needed for when Composer autoloading not used.
         AutoLoaderFactory::factory(array(
+            //'Zend\Loader\ClassMapAutoloader' => array(
+            //),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__  => __DIR__,
+                    // This script may also be used by 
+                    // zf2-validators-empty-or-test package if Composer 
+                    // autoloading not used.
+                    'JimMoser\ValidatorTest' => dirname(dirname(__DIR__)) . 
+                        str_replace('/', DIRECTORY_SEPARATOR,
+                            '/zf2-validators-empty-or-test/test/'),
                 ),
             ),
         ));
-        */
         
-        // use ModuleManager to load this module and it's dependencies
+        // Use ModuleManager to load this module and it's dependencies
         $zf2ModulePaths['JimMoser\Validator'] = dirname(dirname(__DIR__)) . 
             str_replace('/',
                         DIRECTORY_SEPARATOR,

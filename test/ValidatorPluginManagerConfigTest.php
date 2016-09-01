@@ -1,5 +1,5 @@
 <?php
-namespace JimMoser\ValidatorTest;
+namespace JimMoser\ValidatorPluginTest;
 
 use JimMoser\Validator\EmptyValidator;
 use JimMoser\Validator\OrChain;
@@ -10,9 +10,11 @@ use JimMoser\Validator\VerboseOrChain;
  * instances of added validators.
  *
  * @author    Jim Moser <jmoser@epicride.info>
- * @link      http://github.com/jim-moser for source repository
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-plugin-test 
+ *            for source repository
  * @copyright Copyright (c) August 8, 2016 Jim Moser
- * @license   LICENSE.txt at http://github.com/jim-moser/zf2-validators-empty-or  
+ * @license   LICENSE.txt at http://github.com/jim-moser/
+ *            zf2-validators-empty-or-plugin-test  
  *            New BSD License
  */
 class ValidatorPluginManagerTest extends \PHPUnit_Framework_TestCase
