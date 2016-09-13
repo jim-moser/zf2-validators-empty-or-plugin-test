@@ -13,7 +13,7 @@
         {
             "name": "Jim Moser",
             "email": "jmoser@epicride.info",
-            "homepage": "http://epicride.info/jmoser/zendframework"
+            "homepage": "http://epicride.info/JimMoser/zendframework"
         }
     ],
     "repositories": 
@@ -32,8 +32,8 @@
         }
     ],
     "require": {
-    	"jim-moser/zf2-validators-empty-or-plugin": "@dev",
-    	"jim-moser/zf2-validators-empty-or-test": "@dev"
+    	"jim-moser/zf2-validators-empty-or-plugin": "^1.0.0",
+    	"jim-moser/zf2-validators-empty-or-test": "^1.0.0"
     },
     "autoload": {
         "psr-4": {

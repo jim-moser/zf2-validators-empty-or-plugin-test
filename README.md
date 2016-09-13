@@ -43,8 +43,8 @@ README.md file for the jim-moser/zf2-validators-empty-or package available at
 
 If you would like to install the packages manually and use a Module.php file to 
 configure autoloading instead of using Composer to configure autoloading then 
-see the installation section of the jim-moser/zf2-validators-empty-or-plugin 
-package.
+see the installation section of the README.md file in the  
+jim-moser/zf2-validators-empty-or-plugin package.
 
 #Running the Tests
 
