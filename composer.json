@@ -16,21 +16,6 @@
             "homepage": "http://epicride.info/JimMoser/zendframework"
         }
     ],
-    "repositories": 
-    [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jim-moser/zf2-validators-empty-or"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/jim-moser/zf2-validators-empty-or-plugin"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/jim-moser/zf2-validators-empty-or-test"
-        }
-    ],
     "require": {
     	"jim-moser/zf2-validators-empty-or-plugin": "^1.0.0",
     	"jim-moser/zf2-validators-empty-or-test": "^1.0.0"
