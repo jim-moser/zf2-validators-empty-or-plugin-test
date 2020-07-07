@@ -9,7 +9,6 @@
     stopOnFailure="false"
     processIsolation="false"
     backupGlobals="false"
-    syntaxCheck="true"
 >
     <testsuite name="Testing for jim-moser/zf2-validators-empty-or-plugin package.">
         <directory>./test</directory>

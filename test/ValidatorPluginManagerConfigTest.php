@@ -4,6 +4,7 @@ namespace JimMoser\ValidatorPluginTest;
 use JimMoser\Validator\EmptyValidator;
 use JimMoser\Validator\OrChain;
 use JimMoser\Validator\VerboseOrChain;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Unit testing to verify validator plugin manager is configured to obtain 
@@ -17,11 +18,11 @@ use JimMoser\Validator\VerboseOrChain;
  *            zf2-validators-empty-or-plugin-test  
  *            New BSD License
  */
-class ValidatorPluginManagerTest extends \PHPUnit_Framework_TestCase
+class ValidatorPluginManagerTest extends TestCase
 {
     protected $pluginManager;
     
-    public function Setup()
+    public function setUp(): void
     {
         $serviceManager = Bootstrap::getServiceManager();
         $this->pluginManager = $serviceManager->get('ValidatorManager');
