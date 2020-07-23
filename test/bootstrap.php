@@ -1,9 +1,9 @@
 <?php
 namespace JimMoser\ValidatorPluginTest;
 
-use Zend\Loader\AutoloaderFactory;
-use Zend\Mvc\Service\ServiceManagerConfig;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\Loader\AutoloaderFactory;
+use Laminas\Mvc\Service\ServiceManagerConfig;
+use Laminas\ServiceManager\ServiceManager;
 use RuntimeException;
 
 error_reporting(E_ALL | E_STRICT);
@@ -45,9 +45,9 @@ class Bootstrap
         // call classes in these directories.
         // Needed for when Composer autoloading not used.
         AutoLoaderFactory::factory(array(
-            //'Zend\Loader\ClassMapAutoloader' => array(
+            //'Laminas\Loader\ClassMapAutoloader' => array(
             //),
-            'Zend\Loader\StandardAutoloader' => array(
+            'Laminas\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__  => __DIR__,
                     // This script may also be used by 
@@ -101,7 +101,7 @@ class Bootstrap
     	//    second, check for php.ini defined 'ZF2_PATH' variable,
     	//    finally, check in 'vendor/ZF2/library'.
     	
-    	if (class_exists('Zend\Loader\AutoloaderFactory')) {
+    	if (class_exists('Laminas\Loader\AutoloaderFactory')) {
     	    return;
     	}
         $zf2Path = getenv('ZF2_PATH');
@@ -121,7 +121,7 @@ class Bootstrap
 
         include $zf2Path . '/Zend/Loader/AutoloaderFactory.php';
         AutoloaderFactory::factory(array(
-            'Zend\Loader\StandardAutoloader' => array(
+            'Laminas\Loader\StandardAutoloader' => array(
                 'autoregister_zf' => true,
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,
