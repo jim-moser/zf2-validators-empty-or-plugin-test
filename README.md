@@ -7,9 +7,6 @@ package verifies that the jim-moser/zf2-validators-empty-or-plugin package has
 successfully integrated the validators from the 
 jim-moser/zf2-validators-empty-or package into the Zend Framework installation.
 
-Specifying this package as a Composer "require" should cause Composer to install 
-all of the JimMoser/Validators related packages listed below:
-
 Related packages:
 
 * [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/)
@@ -21,6 +18,29 @@ A brief description of the related packages listed above can be found in the
 README.md file for the 
 [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/) 
 package.
+
+#Dependencies
+
+The code provided by this package only depends directly on code and classes 
+provided by the following packages:
+	jim-moser/zf2-validators-empty-or
+	jim-moser/zf2-validators-empty-or-plugin
+	laminas/laminas-loader
+	laminas/laminas-mvc
+	laminas/laminas-servicemanager
+	phpunit/phpunit
+	 
+However it appears that the code within laminas-mvc and/or its' dependencies has 
+several dependencies on code and classes within various laminas packages not 
+specified as dependencies within the composer.json files of laminas-mvc and its' 
+dependencies. To prevent this issue from causing problems, these missing 
+dependencies have been added to the composer.json file of this package. The 
+additional dependencies added under the "requires" section of the composer.json 
+file are:
+        laminas/laminas-i18n
+        laminas/laminas-log
+        laminas/laminas-serializer
+        laminas/laminas-view
 
 #Installation
 
