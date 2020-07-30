@@ -22,7 +22,6 @@
     "require": {
         "jim-moser/zf2-validators-empty-or": "^1",
         "jim-moser/zf2-validators-empty-or-plugin": "^1",
-        "laminas/laminas-dependency-plugin": "^1.0",
         "laminas/laminas-i18n": "^2",
         "laminas/laminas-loader": "^2",
         "laminas/laminas-log": "^2",
